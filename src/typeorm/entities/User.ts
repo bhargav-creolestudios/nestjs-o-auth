@@ -8,6 +8,9 @@ export class User {
     @Column({name: 'google_id', unique: true})
     googleId: string
 
+    @Column({name: 'facebook_id', unique: true})
+    facebookId: string
+
     @Column({default: ''})
     username: string
 

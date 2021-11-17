@@ -3,6 +3,7 @@ import { User } from "src/typeorm"
 export type UserDetails = {
     username: string,
     googleId: string,
+    facebookId: string,
     emailId: string,
 }
 

@@ -3,7 +3,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from 'src/typeorm';
 import { AuthController } from './controllers/auth/auth.controller';
 import { AuthService } from './services/auth/auth.service';
-import { GoogleOAuthStrategy } from './strategies';
+import { GoogleOAuthStrategy } from './strategies/googleStrategy';
+import { FacebookStrategy } from './strategies/facebookStrategy';
 import { SessionSerializer } from './utils/Serializer';
 
 @Module({
@@ -11,6 +12,7 @@ import { SessionSerializer } from './utils/Serializer';
     controllers: [AuthController],
     providers: [
         GoogleOAuthStrategy,
+        FacebookStrategy,
         SessionSerializer,
         {
             provide: 'AUTH_SERVICE',

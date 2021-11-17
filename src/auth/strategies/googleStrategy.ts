@@ -25,7 +25,7 @@ export class GoogleOAuthStrategy extends PassportStrategy(Strategy) {
         let emailId = emails[0].value;
         let fullName = displayName.split(' ');
         const username = lodash.upperFirst(fullName[0]) + " " + lodash.upperFirst(fullName[1]);
-        const details = {googleId, username, emailId};
+        const details = {googleId, username, emailId, facebookId: null};
         
         return this.autheService.validateUser(details);
     }

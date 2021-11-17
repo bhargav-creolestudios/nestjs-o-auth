@@ -20,9 +20,9 @@ import { PassportModule } from '@nestjs/passport';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: '',
-      password: '',
-      database: '',
+      username: 'root',
+      password: 'Creole@123',
+      database: 'nestjs_o',
       entities: entities,
       synchronize: true,
     })
